@@ -97,14 +97,14 @@ $(document).ready(function() {
 
     let htmlTweet = `  
       <article class="tweet-container">
-        <section class="tweet-user-info1">
-            <span id="avatar" class="pad-left-right pad-top tweet-user-info1">
+        <section class="tweet-user-info">
+            <span id="avatar" class="pad-left-right pad-top tweet-user-info">
               <img src="${tweet.user.avatars}"/>
               <span id="username" class="pad-left-right">
-              ${tweet.user.name}
+              <b>${tweet.user.name}</b>
               </span>
             </span>       
-            <span class="tweet-handle pad-left-right" id="tweet-handle">${tweet.user.handle}</span>
+            <span class="tweet-handle pad-left-right" id="tweet-handle"><b>${tweet.user.handle}</b></span>
         </section>
         <br/>
         <div>
