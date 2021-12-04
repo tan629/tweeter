@@ -50,6 +50,7 @@ $(document).ready(function() {
   /*This submit event posts the new tweet to the server*/
   $("#form").submit(function(event) {
         
+    //Prevent default submit action
     event.preventDefault();
 
     if (!validateForm()) {
@@ -57,11 +58,14 @@ $(document).ready(function() {
       return;
     }
 
+    //Serialize the tweet text
+    let serializedData = $("#tweet-text").serialize();
+
     //Form data valid, so it can be posted to the server
     $.ajax({
       type: "POST",
       url: "/tweets",
-      data: $("#tweet-text").serialize(),
+      data: serializedData,
       encode: true,
     }).done(function() {
       loadTweets();
@@ -69,7 +73,7 @@ $(document).ready(function() {
   });
 
   /*This function fetches all the tweets from the server and displays them to the user*/
-  /*Param: tweets - array of tweet objects from the server*/
+  /*Param: <tweets> - Array of tweet objects from the server*/
 
   const renderTweets = function(tweets) {
     // loops through tweets fetched from server
@@ -79,17 +83,18 @@ $(document).ready(function() {
     tweets.forEach(twtObj => {
   
       //Create HTML markup of a tweet object
-      let tweetCard = createTweetElement(twtObj);
+      let htmlTweetElem = createTweetElement(twtObj);
   
-      //Prepend the latest tweet to the existing list of tweets so that the latest is shown first in the list
+      //Prepend the latest tweet (HTML markup) to the existing list of tweets so that the latest is shown first in the list
       $("#tweet-container-parent").prepend(`<br/>`);
-      $("#tweet-container-parent").prepend(tweetCard);
+      $("#tweet-container-parent").prepend(htmlTweetElem);
         
     });
   };
   
   /*This function takes a tweet object given by the server and creates an HTML markup of the tweet object to build up a list of tweets
   to be displayed to the user*/
+  /*Param: <tweet> - a tweet object*/
 
   const createTweetElement = function(tweet) {
     
