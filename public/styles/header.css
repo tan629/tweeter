@@ -17,3 +17,8 @@ header{
 h2{
     font-family: 'Source Sans Pro';
 }
+
+.desktop-header-avatar{
+    padding-top: 50px;
+    height:70%;
+}
