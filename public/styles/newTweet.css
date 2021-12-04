@@ -8,9 +8,10 @@
     margin: 0 auto;
 }
 
-.new-tweet{
+/*This container contains the input tweet element, button and the counter*/
+.new-tweet-container{
     margin: 0 auto;
-    width: 50%;
+    width:80%;
 }
 
 textarea {
@@ -40,10 +41,11 @@ button{
 
 /***Tweet card/container styling***/
 
-.tweet-container{
+/*This container contains all of the tweet CONTENT fetched from the server*/
+.tweet-content-container{
     margin: 0 auto;
     border-style: solid;
-    width: 50%;
+    width: 80%;
 }
 
 .tweet-user-info{
@@ -55,11 +57,11 @@ button{
     margin-left: auto;
 }
 
-.tweet-container:hover{
+.tweet-content-container:hover{
     box-shadow: 10px 10px ;
 }
 
-.tweet-card{
+.tweet-content{
     height:100px;
 }
 

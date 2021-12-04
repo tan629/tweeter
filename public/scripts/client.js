@@ -86,8 +86,8 @@ $(document).ready(function() {
       let htmlTweetElem = createTweetElement(twtObj);
   
       //Prepend the latest tweet (HTML markup) to the existing list of tweets so that the latest is shown first in the list
-      $("#tweet-container-parent").prepend(`<br/>`);
-      $("#tweet-container-parent").prepend(htmlTweetElem);
+      $("#tweet-content-parent").prepend(`<br/>`);
+      $("#tweet-content-parent").prepend(htmlTweetElem);
         
     });
   };
@@ -101,7 +101,7 @@ $(document).ready(function() {
     //Create HTML markup to build list of tweets and return it to the caller
 
     let htmlTweet = `  
-      <article class="tweet-container">
+      <article class="tweet-content-container">
         <section class="tweet-user-info">
             <span id="avatar" class="pad-left-right pad-top tweet-user-info">
               <img src="${tweet.user.avatars}"/>
@@ -113,7 +113,7 @@ $(document).ready(function() {
         </section>
         <br/>
         <div>
-            <textarea readonly class="tweet-card pad-left-right" name="tweet" id="tweet-card">${tweet.content.text}</textarea>
+            <textarea readonly class="tweet-content pad-left-right" name="tweet" id="tweet-content">${tweet.content.text}</textarea>
         </div>
         <footer class="footer">
             <span id="time-ago" class="pad-left-right">
