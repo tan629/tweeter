@@ -1,0 +1,54 @@
+/***Style for main navigation bar***/
+
+/***Color variables***/
+$nav-bg-color: #4056A1;
+$nav-color: #FFFFFF;
+$arrow-color: red;
+
+/***Font variables***/
+$tweeter-header-font: 'Bungee';
+
+nav {   
+    height: 120px;
+    background-color: $nav-bg-color;
+    color: $nav-color;
+    padding-right: 1.5em;
+    padding-left: 1.5em;
+    padding-top: 1.5em;
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+
+    .tweeter-header{
+        font-family: $tweeter-header-font;
+    }
+    
+    .tweetActionText {
+        display: flex;
+        float: right;
+        flex-direction: column;
+        align-items: center;
+
+        .arrow {
+            color: $arrow-color;  
+            animation-duration: 1s;
+            transform-origin: bottom;
+            animation-iteration-count: infinite;
+        }
+        
+        .arrow:hover{
+            opacity: 0.5;
+        }
+        
+        .bounce-1{
+            animation-name: bounce-1;
+            animation-timing-function: linear;
+        }
+        @keyframes bounce-1 {
+            0%   { transform: translateY(0); }
+            50%  { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+    }
+}
+

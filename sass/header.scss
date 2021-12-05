@@ -1,0 +1,50 @@
+/***Styling for main header of the tweeter page***/
+
+$header-bg-color: #d1d1d1;
+
+$header-font: 'Source Sans Pro';
+
+@mixin baseHeader {
+    height: 400px;
+    width: 100%;
+    background-color: $header-bg-color;
+    background-image: url("https://www.transparenttextures.com/patterns/dark-brick-wall.png");
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+    z-index: -1;
+    position: relative;
+    top:120px;
+    
+    h2{
+        font-family: $header-font;
+    }
+
+    .desktop-header-avatar{
+        padding-top: 50px;
+        height:70%;
+    }
+}
+
+@media all and (min-width:1024px) {
+
+    header{
+        @include baseHeader();
+
+        top:150px;
+        left: 50px;
+        width: 50%;
+    }
+
+    .tweet-page{
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media all and (max-width:1023px) {
+    header{
+        @include baseHeader();
+    }
+}
