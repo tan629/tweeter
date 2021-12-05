@@ -1,24 +1,53 @@
-header{
+/***Styling for main header of the tweeter page***/
+@media all and (min-width: 1024px) {
+  header {
     height: 400px;
     width: 100%;
     background-color: #d1d1d1;
     background-image: url("https://www.transparenttextures.com/patterns/dark-brick-wall.png");
-    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
-
     display: flex;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
     flex-direction: column;
     z-index: -1;
     position: relative;
-    top:120px;
-}
-
-h2{
-    font-family: 'Source Sans Pro';
-}
-
-.desktop-header-avatar{
+    top: 120px;
+    top: 150px;
+    left: 50px;
+    width: 50%;
+  }
+  header h2 {
+    font-family: "Source Sans Pro";
+  }
+  header .desktop-header-avatar {
     padding-top: 50px;
-    height:70%;
+    height: 70%;
+  }
+
+  .tweet-page {
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media all and (max-width: 1023px) {
+  header {
+    height: 400px;
+    width: 100%;
+    background-color: #d1d1d1;
+    background-image: url("https://www.transparenttextures.com/patterns/dark-brick-wall.png");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: -1;
+    position: relative;
+    top: 120px;
+  }
+  header h2 {
+    font-family: "Source Sans Pro";
+  }
+  header .desktop-header-avatar {
+    padding-top: 50px;
+    height: 70%;
+  }
 }

@@ -1,83 +1,80 @@
-
 /***New tweet text area style***/
-
-.error-message{
-    outline: red;
-    border-style: solid;
-    color:red;
-    margin: 0 auto;
+.error-message {
+  outline: red;
+  border-style: solid;
+  color: red;
+  margin: 0 auto;
 }
 
 /*This container contains the input tweet element, button and the counter*/
-.new-tweet-container{
-    margin: 0 auto;
-    width:80%;
+.new-tweet-container {
+  margin: 0 auto;
+  width: 80%;
 }
 
 textarea {
-    outline: 0;
-    border-width: 0 0 5px;
-    border-color: #545149;
-    width: 100%;
-    height: 100px;
-    background-color: #f4f1ec;
-    resize: none;
+  outline: 0;
+  border-width: 0 0 5px;
+  border-color: #545149;
+  width: 100%;
+  height: 100px;
+  background-color: #f4f1ec;
+  resize: none;
 }
 
-button{
-    background-color: #4056A1;
-    color: #FFFFFF;
-    font-family: 'Bungee';
+button {
+  background-color: #4056A1;
+  color: #FFFFFF;
+  font-family: "Bungee";
 }
 
-.counter{
-    float: right;
-    font-family: 'Bungee';
+.counter {
+  float: right;
+  font-family: "Bungee";
 }
 
-.counter-red{
-    color:red;
+.counter-red {
+  color: red;
 }
 
 /***Tweet card/container styling***/
-
 /*This container contains all of the tweet CONTENT fetched from the server*/
-.tweet-content-container{
-    margin: 0 auto;
-    border-style: solid;
-    width: 80%;
+.tweet-content-container {
+  margin: 0 auto;
+  border-style: solid;
+  width: 80%;
 }
 
-.tweet-user-info{
-    display: flex;
-    align-items: center;
+.tweet-user-info {
+  display: flex;
+  align-items: center;
 }
 
-.tweet-handle{
-    margin-left: auto;
+.tweet-handle {
+  margin-left: auto;
 }
 
-.tweet-content-container:hover{
-    box-shadow: 10px 10px ;
+.tweet-content-container:hover {
+  box-shadow: 10px 10px;
 }
 
-.tweet-content{
-    height:100px;
+.tweet-content {
+  height: 100px;
 }
 
-.footer-icons{
-    float: right;
+.footer-icons {
+  float: right;
 }
 
-.pad-left-right{
-    padding-left: 10px;
-    padding-right: 10px;
+.pad-left-right {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-.pad-top{
-    padding-top: 5px;
+.pad-top {
+  padding-top: 5px;
 }
 
-i:hover{
-    color: red;
+i:hover {
+  color: red;
 }
