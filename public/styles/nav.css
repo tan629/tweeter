@@ -1,31 +1,47 @@
-nav {   
-    height: 120px;
-    background-color: #4056A1;
-    color: #FFFFFF;
-    padding-right: 1.5em;
-    padding-left: 1.5em;
-    padding-top: 1.5em;
-    z-index: 1;
-    position: fixed;
-    width: 100%;
+/***Style for main navigation bar***/
+/***Color variables***/
+/***Font variables***/
+nav {
+  height: 120px;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  padding-right: 1.5em;
+  padding-left: 1.5em;
+  padding-top: 1.5em;
+  z-index: 1;
+  position: fixed;
+  width: 100%;
 }
-
-.tweeter-header{
-    font-family: 'Bungee';
+nav .tweeter-header {
+  font-family: "Bungee";
 }
-
-.tweetActionText {
-    display: flex;
-    float: right;
-    flex-direction: column;
-    align-items: center;
+nav .tweetActionText {
+  display: flex;
+  float: right;
+  flex-direction: column;
+  align-items: center;
 }
-
-.arrow {
-    color: red;
+nav .tweetActionText .arrow {
+  color: red;
+  animation-duration: 1s;
+  transform-origin: bottom;
+  animation-iteration-count: infinite;
 }
-
-.arrow:hover{
-    opacity: 0.5;
-    animation-name: bounce;
+nav .tweetActionText .arrow:hover {
+  opacity: 0.5;
+}
+nav .tweetActionText .bounce-1 {
+  animation-name: bounce-1;
+  animation-timing-function: linear;
+}
+@keyframes bounce-1 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
