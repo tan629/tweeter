@@ -22,4 +22,4 @@ This repository is the starter code for the project: Students will fork and clon
 !["Screenshot of tweet box and tweets"](https://github.com/tan629/tweeter/blob/master/docs/tweet-box.png)
 
 ## Demo
-!["Demo of tweeter page"](https://github.com/tan629/tweeter/blob/master/docs/tweeter_demo.mp4)
+!["Demo of tweeter page"](https://github.com/tan629/tweeter/blob/master/docs/tweeter_demo.gif)
