@@ -7,9 +7,26 @@
 
 $(document).ready(function() {
   
+  function scrollBarVisible() {
+    var hContent = $("body").height(); // get the height of your content
+    var hWindow = $(window).height();  // get the height of the visitor's browser window
+
+    // if the height of your content is bigger than the height of the 
+    // browser window, we have a scroll bar
+    if(hContent>hWindow) { 
+        return true;    
+    }
+
+    return false;
+  }
+
   $("#arrow-btn").on('click', function() {
-    $("#new-tweet-container").toggle(500);
+    $("#new-tweet-container").toggle(300);
     $("#tweet-text").focus();
+  });
+
+  $("#topBtn").on('click', function() {
+    $(window).scrollTop(0);
   });
 
   /*This function validates the tweet data entered by the user*/
@@ -37,8 +54,6 @@ $(document).ready(function() {
   /*This function fetches all the tweets from the server and displays it to the user*/
   const loadTweets = function() {
 
-    $("#new-tweet-container").hide();
-    $("#err").hide();
     //Get all the tweets from the server
     $.ajax({
       type: "GET",
@@ -94,10 +109,17 @@ $(document).ready(function() {
       let htmlTweetElem = createTweetElement(twtObj);
   
       //Prepend the latest tweet (HTML markup) to the existing list of tweets so that the latest is shown first in the list
-      $("#tweet-content-parent").prepend(`<br/>`);
+      $("#tweet-content-parent").prepend(`<br/><br/>`);
       $("#tweet-content-parent").prepend(htmlTweetElem);
         
     });
+
+    if(scrollBarVisible()) {
+      $("#topBtn").show();
+    }
+
+    $("#new-tweet-container").hide();
+
   };
   
   /*This function takes a tweet object given by the server and creates an HTML markup of the tweet object to build up a list of tweets
