@@ -22,6 +22,8 @@ $(document).ready(function() {
       counter.addClass("counter-red");
     } else {
       counter.removeClass("counter-red");
+      $("#err").val('');
+      $("#err").hide();
     }
   });
 

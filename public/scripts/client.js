@@ -20,12 +20,14 @@ $(document).ready(function() {
     //Validate tweet to see if it's too long
     if ($("#tweet-text").val().length > 140) {
       $("#err").text("Tweet must be less than 140 characters!");
+      $("#tweet-text").focus();
       return false;
     }
     
     //Cannot send empty tweet
     if ($("#tweet-text").val().length === 0) {
       $("#err").text("Empty tweet cannot be posted!");
+      $("#tweet-text").focus();
       return false;
     }
     
