@@ -20,3 +20,6 @@ This repository is the starter code for the project: Students will fork and clon
 ## Screenshots
 !["Screenshot of full tweeter page"](https://github.com/tan629/tweeter/blob/master/docs/full-tweet-page.png)
 !["Screenshot of tweet box and tweets"](https://github.com/tan629/tweeter/blob/master/docs/tweet-box.png)
+
+## Demo
+!["Demo of tweeter page"](https://github.com/tan629/tweeter/blob/master/docs/tweeter_demo.mp4)
