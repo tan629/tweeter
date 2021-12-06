@@ -6,6 +6,11 @@
  */
 
 $(document).ready(function() {
+  
+  $("#arrow-btn").on('click', function() {
+    $("#new-tweet-container").toggle(500);
+    $("#tweet-text").focus();
+  });
 
   /*This function validates the tweet data entered by the user*/
   const validateForm = function() {
@@ -30,6 +35,7 @@ $(document).ready(function() {
   /*This function fetches all the tweets from the server and displays it to the user*/
   const loadTweets = function() {
 
+    $("#new-tweet-container").hide();
     $("#err").hide();
     //Get all the tweets from the server
     $.ajax({
@@ -44,8 +50,8 @@ $(document).ready(function() {
     $("#counter").val('140');
   };
       
-  //Load all tweets from the server when the page is loaded
-  loadTweets();
+    //Load all tweets from the server when the page is loaded
+    loadTweets();
 
   /*This submit event posts the new tweet to the server*/
   $("#form").submit(function(event) {
