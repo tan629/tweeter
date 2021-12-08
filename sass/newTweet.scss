@@ -16,12 +16,14 @@ $tweeter-header-font: 'Bungee';
     border-style: solid;
     color: $error-color;
     margin: 0 auto;
+    display: none;
 }
 
 /*This container contains the input tweet element, button and the counter*/
 .new-tweet-container{
     margin: 0 auto;
-    width:80%;
+    width:70%;
+    display: none;
 }
 
 textarea {
@@ -53,9 +55,10 @@ button{
 
 /*This container contains all of the tweet CONTENT fetched from the server*/
 .tweet-content-container{
-    margin: 0 auto;
+    margin-left: auto;
     border-style: solid;
-    width: 80%;
+    width: 70%;
+    margin-right: auto;
 }
 
 .tweet-user-info{
@@ -91,3 +94,14 @@ button{
 i:hover{
     color: $error-color;
 }
+
+#scrollToTopBtn {
+    background-color: red;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    width: 75px;
+    height: 50px;
+    float: right;
+  }

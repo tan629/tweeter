@@ -1,5 +1,5 @@
 /***Styling for main header of the tweeter page***/
-@media all and (min-width: 1024px) {
+@media all and (min-width: 1181px) {
   header {
     height: 400px;
     width: 100%;
@@ -13,23 +13,27 @@
     position: relative;
     top: 120px;
     top: 150px;
-    left: 50px;
-    width: 50%;
-  }
-  header h2 {
-    font-family: "Source Sans Pro";
-  }
-  header .desktop-header-avatar {
-    padding-top: 50px;
-    height: 70%;
+    left: 150px;
+    width: 55%;
   }
 
   .tweet-page {
     display: flex;
     flex-direction: row;
   }
+
+  .desktop-header-avatar {
+    padding-top: 50px;
+    height: 70%;
+    padding-right: 130px;
+  }
+
+  h2 {
+    font-family: "Source Sans Pro";
+    padding-right: 130px;
+  }
 }
-@media all and (max-width: 1023px) {
+@media all and (max-width: 1180px) {
   header {
     height: 400px;
     width: 100%;
@@ -43,11 +47,15 @@
     position: relative;
     top: 120px;
   }
-  header h2 {
-    font-family: "Source Sans Pro";
-  }
-  header .desktop-header-avatar {
+
+  .desktop-header-avatar {
     padding-top: 50px;
     height: 70%;
+    padding-right: 50px;
+  }
+
+  h2 {
+    font-family: "Source Sans Pro";
+    padding-right: 50px;
   }
 }

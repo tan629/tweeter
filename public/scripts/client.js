@@ -25,7 +25,7 @@ $(document).ready(function() {
     $("#tweet-text").focus();
   });
 
-  $("#topBtn").on('click', function() {
+  $("#scrollToTopBtn").on('click', function() {
     $(window).scrollTop(0);
   });
 
@@ -71,7 +71,7 @@ $(document).ready(function() {
     loadTweets();
 
   /*This submit event posts the new tweet to the server*/
-  $("#form").submit(function(event) {
+  $("#submitBtn").on("click",function(event) {
         
     //Prevent default submit action
     event.preventDefault();
@@ -102,7 +102,9 @@ $(document).ready(function() {
     // loops through tweets fetched from server
     // calls createTweetElement for each tweet
     // takes return value and prepends it to the tweets container
-  
+    
+    $("#tweet-content-parent").empty();
+    
     tweets.forEach(twtObj => {
   
       //Create HTML markup of a tweet object
@@ -115,7 +117,7 @@ $(document).ready(function() {
     });
 
     if(scrollBarVisible()) {
-      $("#topBtn").show();
+      $("#scrollToTopBtn").show();
     }
 
     $("#new-tweet-container").hide();
